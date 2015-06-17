@@ -7,12 +7,25 @@ class cember extends Sekil{
 		this.yaricap=yaricap;
 	}
 	void alan(){
-		System.out.println("Çemberin Alaný: "+(int)Math.PI*yaricap*yaricap);
+		System.out.println("Ã‡emberin AlanÃ½: "+(int)Math.PI*yaricap*yaricap);
 	}
 	void cevre(){
-		System.out.println("Çemberin Alaný: "+(int)Math.PI*yaricap*2);
+		System.out.println("Ã‡emberin AlanÃ½: "+(int)Math.PI*yaricap*2);
 	}
-	
+}
+class dikdortgen extends Sekil{
+	int kkenar,ukenar;
+	public dikdortgen(String x, String y, int kkenar, int ukenar){
+		super(x,y);
+		this.kkenar=kkenar;
+		this.ukenar=ukenar;
+	}
+	void alan(){
+		System.out.println("Alan: "+kkenar*ukenar);
+	}
+	void cevre(){
+		System.out.println("Cevre: "+2*(kkenar+ukenar));
+	}
 }
 
 public class Sekil {
@@ -25,7 +38,7 @@ public class Sekil {
 		
 	}
 	void yazdir(){
-		System.out.println("Cisimin adý: "+isim+" Cisimin rengi: "+renk	);
+		System.out.println("Cisimin adÄ±: "+isim+" Cisimin rengi: "+renk	);
 	}
 	void alan(){
 		}
@@ -34,11 +47,12 @@ public class Sekil {
 	
 
 	public static void main(String[] args) {
-		cember c=new cember("Cember","Sarý",5);
+		cember c=new cember("Cember","Sari",5);
 		c.alan();
 		c.cevre();
-
-		
+		dikdortgen d=new dikdortgen("Dikdortgen","yeÅŸil",4,5);
+		d.alan();
+		d.cevre();
 	}
 
 }
